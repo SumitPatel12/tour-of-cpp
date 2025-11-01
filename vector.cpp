@@ -10,6 +10,9 @@ Vector::Vector(int s) {
   sz = s;
 }
 
+// When the object goes out of scope we delete the associated memory.
+Vector::~Vector() { delete[] elem; }
+
 double &Vector::operator[](int i) {
   if (!(0 <= i) < size()) {
     throw std::out_of_range{"Vector::operator[]"};
@@ -17,4 +20,4 @@ double &Vector::operator[](int i) {
   return elem[i];
 }
 
-int Vector::size() { return sz; }
+int Vector::size() const { return sz; }
