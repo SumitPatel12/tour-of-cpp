@@ -40,10 +40,18 @@ template <Element T> Vector_Template<T>::Vector_Template(int s) {
   sz = s;
 }
 
+// Non-const version
+template <Element T> T &Vector_Template<T>::operator[](int i) {
+  if (i < 0 || size() <= i)
+    throw std::out_of_range{"Vector::operator[]"};
+  return elem[i];
+}
+
+// Const version
 template <Element T> const T &Vector_Template<T>::operator[](int i) const {
   if (i < 0 || size() <= i)
-    return elem[i];
-  throw std::out_of_range{"Vector::operator[]"};
+    throw std::out_of_range{"Vector::operator[]"};
+  return elem[i];
 }
 
 // Copy constructor
@@ -98,4 +106,15 @@ void write_vector_template(Vector_Template<std::string> &vs) {
   for (auto &s : vs) {
     std::cout << s << '\n';
   }
+}
+
+int main() {
+  Vector_Template<std::string> vs(3);
+  vs[0] = "Hello";
+  vs[1] = "World";
+  vs[2] = "!";
+
+  write_vector_template(vs);
+
+  return 0;
 }

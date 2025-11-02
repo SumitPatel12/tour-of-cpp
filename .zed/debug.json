@@ -1,0 +1,86 @@
+[
+  {
+    "label": "Debug vector_template",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/vector_template",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "vector_template.cpp", "-o", "vector_template"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug buffer",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/buffer",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "buffer.cpp", "-o", "buffer"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug vector_container",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/vector_container",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "vector_container.cpp", "-o", "vector_container"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug vector_module",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/vector_module",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "vector_module.cpp", "-o", "vector_module"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug vector",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/vector",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "vector.cpp", "-o", "vector"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug union",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/union",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "union.cpp", "-o", "union"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  },
+  {
+    "label": "Debug errror",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/errror",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "-std=c++20", "errror.cpp", "-o", "errror"],
+      "cwd": "${ZED_WORKTREE_ROOT}"
+    }
+  }
+]
