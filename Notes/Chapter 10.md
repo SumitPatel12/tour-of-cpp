@@ -1,0 +1,12 @@
+## Advice
+- Use `std::string` to own character sequences.
+- Prefer `string` operations to C-style string functions.
+- Return strings by value, rely on move semantics and copy elision.
+- Use `at()` rather  than *iterators or []* when you want range checking.
+- Use *iterators or []* rather than `at() `when you want to optimize for speed.
+- Use a range-for to safely minimize range checking.
+- `string` input doesn't overlfow.
+- Use `stringstream` or a generic value extracition function (such as to<X>) for numeric conversion of strings.
+- Use `string_view` as an argument of functions that needs to read character sequences stored in various ways.
+  - `string_view` does not own the characters. It can be thought of as a pointer with a length.
+- Use `?` to make patterns lazy.
